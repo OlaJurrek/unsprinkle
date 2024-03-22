@@ -4,7 +4,6 @@ import styled from "styled-components/macro";
 const Hero = () => {
   return (
     <Wrapper>
-      {/* <HeroPicture>  */}
       <picture>
         <source
           type="image/avif"
@@ -14,10 +13,12 @@ const Hero = () => {
           type="image/jpeg"
           srcSet="/images/hero-img.jpg 1x, /images/hero-img@2x.jpg 2x, /images/hero-img@3x.jpg 3x"
         />
-        <HeroImage src="/images/hero-img.jpg" />
+        <HeroImage
+          src="/images/hero-img.jpg"
+          alt="A curious-looking cat with blue eyes and brown fur"
+        />
       </picture>
-      {/* </HeroPicture> */}
-      <Swoop src="/swoop.svg" />
+      <Swoop src="/swoop.svg" alt="" />
     </Wrapper>
   );
 };
@@ -30,10 +31,6 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: flex-end;
   background: hsl(0deg 0% 1%);
-`;
-
-const HeroPicture = styled.picture`
-  display: block;
 `;
 
 const HeroImage = styled.img`

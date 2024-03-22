@@ -21,7 +21,7 @@ const PhotoGridItem = ({ id, src, alt, tags }) => {
               "@2x.jpg"
             )} 2x, ${src.replace(".jpg", "@3x.jpg")} 3x`}
           />
-          <Image src={src} />
+          <Image src={src} alt={alt} />
         </picture>
       </Anchor>
       <Tags>
